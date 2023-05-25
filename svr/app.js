@@ -17,7 +17,7 @@ app.post('/api/paths', (req, res) => {
 
   // Function to convert path data to SVG
   function convertToSVG(pathData, width, height) {
-    let svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + width + '" height="' + height + '">';
+    let svg = '<svg  id="svgContainer"  xmlns="http://www.w3.org/2000/svg" width="' + width + '" height="' + height + '">';
 
     // Loop through each path object and generate the corresponding SVG path element
     for (let i = 0; i < pathData.length; i++) {
