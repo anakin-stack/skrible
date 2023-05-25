@@ -1,10 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
+const fs = require('fs');
+const { createCanvas, loadImage } = require('canvas');
+
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
-const { createCanvas, loadImage } = require('canvas');
-const fs = require('fs');
+
 
 // Endpoint to handle the POST request with JSON payload
 app.post('/api/paths', (req, res) => {
